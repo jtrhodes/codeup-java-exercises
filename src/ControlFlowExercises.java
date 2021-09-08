@@ -45,9 +45,9 @@ public class ControlFlowExercises {
         do {
             System.out.println("What number would you like to go up to?");
             int num = scanner.nextInt();
-            System.out.printf("Number %s%s%n","| squared ", "| cubed");
+            System.out.printf("Number %s%s%n","| squared", " | cubed");
             for (long i = num; i > 0; i--) {
-                System.out.printf("%s%s%s%s%s%n", i, " | ", (i * i), " | ", Math.pow(i, 3));
+                System.out.printf("%s%s%s%s%s%n", i, "      |   ", (i * i),  "   |    ", Math.pow(i, 3));
             }
             String ghostString = scanner.nextLine();
             System.out.println("Do you wish to continue?");
@@ -76,5 +76,23 @@ public class ControlFlowExercises {
            answer = scanner.nextLine();
        }while(answer.equals("yes"));
         System.out.println("Fine il go grade my own papers!");
+        int pin = 2231;
+        int counter = 0;
+        do{
+            System.out.println("Please enter your pin");
+            int response = scanner.nextInt();
+            if(response == pin){
+                System.out.println("Excellent you are logged in.");
+                break;
+            }else if(counter == 2){
+                System.out.println("We're sorry you have failed to answer correctly to many times.");
+                counter++;
+            }
+            else{
+                System.out.println("Incorrect, please try again!");
+                counter++;
+            }
+        }while(counter < 3);
+
     }
 }
