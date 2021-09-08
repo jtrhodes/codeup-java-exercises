@@ -21,12 +21,13 @@ public class Therapist {
                 reply = scanner.nextLine();
                 if(reply.equals("yes")){
                     talk = true;
-                }else {
-                    x = false;
                 }
+//                else {
+//                    x = false;
+//                }
             } else {
-                x = false;
                 System.out.println("Okay, if you dont feel like talking why did you come in today?");
+                x = false;
             }
         }while(x == true);
     }
