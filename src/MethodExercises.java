@@ -8,7 +8,7 @@ public class MethodExercises {
         System.out.println(division(25,5));
         System.out.println(modulus(100,5));
         numberRange(1,10);
-        factorial(5);
+        factorial();
     }
     public static int addition(int num1,int num2){
         return num1 + num2;
@@ -40,22 +40,19 @@ public class MethodExercises {
         return userInput;
     }
 
-    public static void factorial(int n) {
+    public static void factorial() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Please enter a number between 1-10");
-        int num = 1;
         int number = sc.nextInt();
+        String result = "";
+        long value = number;
+        long num = number;
             for(int i=1;i<=number;i++) {
-                n = n + i;
+                num += num * i;
+                value = number * i;
+                result += "x" + i;
+//                result = number + (i>1) + result;
             }
-        System.out.println("Factorial of "+number+" is: "+n);
+        System.out.println(value +"! " + result + "=" + num);
     }
 }
-//    int i,fact=1;
-//    int number=5;//It is the number to calculate factorial
-//  for(i=1;i<=number;i++){
-//          fact=fact*i;
-//          }
-//          System.out.println("Factorial of "+number+" is: "+fact);
-//
-//
