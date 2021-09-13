@@ -32,5 +32,22 @@ public class Input {
         }
         return userInput;
     }
-
+    public int getDouble(double min, double max){
+        System.out.println("Enter an integer between " + min + " and " + max);
+        int userInput = scanner.nextInt();
+        if (userInput > min || userInput < max){
+            userInput = getDouble(min,max);
+        }
+        return userInput;
+    }
+    public double getDouble(){
+        System.out.println("Please enter a number");
+        double userInput = scanner.nextDouble();
+        return userInput;
+    }
+    public double getDouble(String prompt){
+        System.out.println(prompt);
+        double userInput = scanner.nextDouble();
+        return userInput;
+    }
 }
