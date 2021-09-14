@@ -2,7 +2,6 @@ import java.util.Arrays;
 
 public class Persons {
     String name;
-    int age;
 //    public static Persons[] addPersons(Persons[] person) {
 //        Persons[] people = Arrays.copyOf(person, person.length + 1);
 //        for(Persons persons : people) {
@@ -14,33 +13,28 @@ public class Persons {
 //        return people;
 //    }
 
-    public Persons(String name, int age) {
+    public Persons(String name) {
         this.name = name;
-        this.age = age;
     }
+
+
 
 
     public String getName() {
         return name;
     }
 
-    public int getAge() {
-        return age;
-    }
 
     public void setName(String name) {
         this.name = name;
     }
 
-    public void setAge(int age) {
-        this.age = age;
-    }
 
     public static void main(String[] args) {
         Persons[] person = {
-                new Persons("Chucky", 45),
-                new Persons("Tom", 25),
-                new Persons("Carol", 32)
+                new Persons("Chucky"),
+                new Persons("Tom"),
+                new Persons("Carol")
         };
         for (Persons p : person) {
             System.out.println(p.getName());

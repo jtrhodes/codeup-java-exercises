@@ -1,11 +1,8 @@
 public class Person {
     private String name;
-    private int age;
-    public static void main(String[] args) {
-        Person jeff = new Person();
-        jeff.setName("Jeff");
-        System.out.println(jeff.getName());
-        jeff.sayHello();
+
+    public Person(String name) {
+        this.name = name;
     }
 
     public void setName(String name) {
@@ -15,6 +12,8 @@ public class Person {
     public String getName(){
         return name;
     }
+
+
 
     public void sayHello(){
         System.out.printf("Hello, %s", getName());
