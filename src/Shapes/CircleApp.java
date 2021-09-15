@@ -1,7 +1,9 @@
+package Shapes;
+
 import util.Input;
 public class CircleApp {
     public static void main(String[] args) {
-        String prompt = "Enter the radius of your Circle";
+        String prompt = "Enter the radius of your Shapes.Circle";
         Input input = new Input();
         double radius = input.getDouble();
         Circle circle = new Circle(radius);

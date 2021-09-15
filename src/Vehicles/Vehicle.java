@@ -1,7 +1,13 @@
 package Vehicles;
 
 public class Vehicle {
-    private String name;
+    protected String name;
+    public Vehicle(String name){
+        this.name = name;
+    }
+
+    public Vehicle() {
+    }
 
     public String getName() {
         return name;
@@ -16,3 +22,4 @@ public class Vehicle {
         System.out.println("Honk Honk. Vroom Vroom");
     }
 }
+
