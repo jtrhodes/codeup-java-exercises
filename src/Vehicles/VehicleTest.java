@@ -15,5 +15,7 @@ public class VehicleTest {
 //        chevy.makeNoise();
         chevy.breakDown();
         System.out.println(chevy.getName());
+        Vehicle mustang = new MuscleCar("Mustang");
+        mustang.makeNoise();
     }
 }

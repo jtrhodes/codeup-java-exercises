@@ -55,4 +55,5 @@ public class MethodExercises {
             }
         System.out.println(value +"! " + result + "=" + num);
     }
+
 }
