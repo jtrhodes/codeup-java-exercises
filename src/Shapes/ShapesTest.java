@@ -12,5 +12,7 @@ public class ShapesTest {
         Measureable nextShape = new Square(5);
         System.out.println(nextShape.getArea());
         System.out.println(nextShape.getPerimeter());
+//        Rectangle thisShape =new Rectangle(5, 3);
+//        System.out.println(thisShape.getArea());
     }
 }

@@ -1,9 +1,18 @@
 package Shapes;
 
 public class Rectangle extends Quadrilateral implements Measureable {
-
     public Rectangle(double length, double width) {
         super(length, width);
+    }
+
+    @Override
+    void setLength(double length) {
+
+    }
+
+    @Override
+    void setWidth(double width) {
+
     }
 
     @Override
