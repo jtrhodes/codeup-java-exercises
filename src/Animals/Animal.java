@@ -1,3 +1,5 @@
+package Animals;
+
 public class Animal {
     private String name;
 
@@ -19,14 +21,14 @@ public class Animal {
         this.sound = sound;
     }
 
-//    public Animal(String name, String sound) {
+//    public Animals.Animal(String name, String sound) {
 //        this.name = name;
 //        this.sound = sound;
 //    }
 
 public void makeNoise(){
     System.out.println("The noise an" + name +" makes is" + sound);
-    Quote.RandomQuote();
+//    Quote.RandomQuote();
 }
 }
 
