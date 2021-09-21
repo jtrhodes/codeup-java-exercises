@@ -36,13 +36,13 @@ public class GradesApplication {
         students.put("BridgetteRules007", bridgette);
         students.put("AliceInWonderland", alice);
         students.put("Gerard4Ever", gerard);
-        System.out.printf("%s%n Who would you like to see the grades of?",students.keySet());
+        System.out.printf("%s%n%n Who would you like to see the grades of?",students.keySet());
         String userName = scanner.next();
-        do{
+        while(!students.containsKey(userName)) {
             System.out.println("That is not a valid username. Please enter a valid username");
-            userName = scanner.next();
-        }while(!students.containsKey(userName));
-        System.out.printf(""userName);
+            userName = scanner.nextLine();
+        }
+        System.out.println("Name: " + students.get(userName).getName() + "   Github Username: " + userName + "\n" + "Current Average " + students.get(userName).getGradeAverage() + " all grades " + students.get(userName).grades);
 
     }
 
