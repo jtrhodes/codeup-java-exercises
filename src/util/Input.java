@@ -12,7 +12,9 @@ public class Input {
         return userInput;
     }
     public String getString(String input){
-        return input;
+        System.out.println("Please enter a number");
+        String userInput = scanner.nextLine();
+        return userInput;
     }
 
     public Input() {
@@ -30,7 +32,7 @@ public class Input {
     public int getInt(){
         int userInput;
         try {
-             userInput = Integer.valueOf(getString());
+             userInput = Integer.valueOf(getString("input"));
         } catch (NumberFormatException num){
             System.out.println("That is incorrect please try again");
             return getInt();
@@ -54,11 +56,9 @@ public class Input {
         return userInput;
     }
     public double getDouble(){
-//        System.out.println("Please enter a number");
-//        double userInput = scanner.nextDouble();
         double userInput;
         try{
-            userInput = Double.valueOf(getString());
+            userInput = Double.valueOf(getString("input"));
         }catch (NumberFormatException num){
             System.out.println("say what again");
             return getDouble();
@@ -68,6 +68,11 @@ public class Input {
     public double getDouble(String prompt){
         System.out.println(prompt);
         double userInput = scanner.nextDouble();
+        return userInput;
+    }
+    public int getBinary(){
+        System.out.println("Please enter a binary number");
+        int userInput = scanner.nextInt();
         return userInput;
     }
 }
