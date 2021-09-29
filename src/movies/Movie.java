@@ -1,12 +1,16 @@
 package movies;
 
-public class Movie {
+public class Movie  implements Entertains{
     private String name;
-    private String category;
+    private String director;
 
-    public Movie(String name, String category) {
-        this.name = name;
-        this.category = category;
+    public Movie(String name, String director) throws IllegalArgumentException {
+        if (name == null || name.isBlank() || director == null || director.isBlank()){
+            throw new IllegalArgumentException();
+        }else {
+            this.name = name;
+            this.director = director;
+        }
     }
 
     public String getName() {
@@ -17,11 +21,16 @@ public class Movie {
         this.name = name;
     }
 
-    public String getCategory() {
-        return category;
+    public String getDirector() {
+        return director;
     }
 
-    public void setCategory(String category) {
-        this.category = category;
+    public void setDirector(String director) {
+        this.director = director;
+    }
+
+    @Override
+    public String audienceReaction() {
+        return "Ohhhhh " + this.name + "was so awesome!";
     }
 }
